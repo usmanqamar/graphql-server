@@ -34,7 +34,7 @@ node_modules
 
 # Optional npm cache directory
 .npm
-
+dist/
 #env files
 .env*
 # Optional REPL history
