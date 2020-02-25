@@ -36,7 +36,7 @@ node_modules
 .npm
 
 #env files
-*env*
+.env*
 # Optional REPL history
 .node_repl_history
 
