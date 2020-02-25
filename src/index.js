@@ -1,13 +1,13 @@
-/* @flow */
 /* eslint-disable no-unused-vars */
+const express = require('express');
+const graphqlHTTP = require('express-graphql');
+const { schema } = require('./gqlSchema/schema');
+const models = require('./Models');
+const { connect } = require('./utils/connect');
+//require('custom-env').env();
 
-import express from 'express';
-import graphqlHTTP from 'express-graphql';
-import { schema } from './schema';
-
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
-
 app.use(
   '/graphql',
   graphqlHTTP(async (request, response, graphQLParams) => {
@@ -16,11 +16,13 @@ app.use(
       graphiql: true,
       context: {
         req: request,
+        models,
       },
     };
   })
 );
 
-app.listen(PORT, () => {
-  console.log(`The server is running at http://localhost:${PORT}/graphql`);
+app.listen(PORT, async () => {
+  await connect();
+  console.log(`🚀 The server is running at http://localhost:${PORT}/graphql`);
 });

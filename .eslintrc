@@ -3,7 +3,6 @@
     "airbnb-base",
     "prettier"
   ],
-  "parser": "babel-eslint",
   "rules": {
     "no-underscore-dangle": 0,
     "arrow-body-style": 0,
@@ -18,12 +17,12 @@
       "objects": "always-multiline",
       "imports": "always-multiline",
       "exports": "always-multiline",
-      "functions": "ignore",
+      "functions": "ignore"
     }],
     "prettier/prettier": ["error", {
       "printWidth": 100,
       "singleQuote": true,
-      "trailingComma": "es5",
+      "trailingComma": "es5"
     }],
     "import/prefer-default-export": 0,
     "arrow-parens": 0,
@@ -35,14 +34,13 @@
     "jest": true
   },
   "plugins": [
-    "flowtype",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "globals": {
     "Class": true,
     "Iterator": true,
     "$Shape": true,
-    "$FlowFixMe": true,
-    "$ReadOnlyArray": true
+    "$ReadOnlyArray": true,
   }
 }
