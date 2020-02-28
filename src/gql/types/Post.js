@@ -5,6 +5,7 @@ const PostTC = schemaComposer.createObjectTC({
   fields: {
     id: 'Int!',
     title: 'String',
+    name: 'String',
     votes: 'Int',
     authorId: 'Int',
   },

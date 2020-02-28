@@ -1,7 +1,7 @@
-const { User } = require('./user');
+const { Log } = require('./log');
 const { Author } = require('./author');
 
 module.exports = {
-  User,
+  Log,
   Author,
 };

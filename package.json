@@ -17,16 +17,20 @@
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.0",
     "cuid": "^2.1.8",
     "custom-env": "^2.0.1",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql-compose": "^7.11.0",
+    "graphql-compose-mongoose": "^7.3.4",
     "graphql-iso-date": "^3.6.1",
     "jest": "^25.1.0",
     "lodash": "^4.17.10",
     "mongoose": "^5.9.1",
+    "nodemailer-promise": "^2.0.0",
     "nodemon": "^2.0.2"
   },
   "jest": {
@@ -40,7 +44,8 @@
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
-      "!**/vendor/**"
+      "!**/vendor/**",
+      "!**/coverage/**"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/testconfig.js"
   },

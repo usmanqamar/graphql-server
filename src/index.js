@@ -1,26 +1,13 @@
-/* eslint-disable no-unused-vars */
+import routes from './routes';
+
 const express = require('express');
-const graphqlHTTP = require('express-graphql');
-const { schema } = require('./gqlSchema/schema');
-const models = require('./Models');
+const cors = require('cors');
 const { connect } = require('./utils/connect');
-//require('custom-env').env();
 
 const PORT = process.env.PORT || 4000;
 const app = express();
-app.use(
-  '/graphql',
-  graphqlHTTP(async (request, response, graphQLParams) => {
-    return {
-      schema,
-      graphiql: true,
-      context: {
-        req: request,
-        models,
-      },
-    };
-  })
-);
+app.use(cors());
+app.use(routes);
 
 app.listen(PORT, async () => {
   await connect();

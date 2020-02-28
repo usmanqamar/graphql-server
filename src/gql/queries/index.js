@@ -1,8 +1,8 @@
 const { merge } = require('lodash');
 const PostQueries = require('./Post');
 const AuthorQueries = require('./Author');
-const UserQueries = require('./User');
+const LogQueries = require('./Log');
 
-const query = merge(PostQueries, AuthorQueries, UserQueries);
+const query = merge(PostQueries, AuthorQueries, LogQueries);
 
 module.exports = query;

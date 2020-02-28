@@ -1,9 +1,11 @@
-const { posts } = require('../../data');
-
 const queryFields = {
   posts: {
     type: '[Post]',
-    resolve: () => posts,
+    resolve: () => [],
+  },
+  books: {
+    type: '[Post]',
+    resolve: () => [],
   },
 };
 
