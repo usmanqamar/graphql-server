@@ -10,6 +10,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(routes);
+app.use(express.static(`${__dirname}/templates`));
 
 app.listen(PORT, async () => {
   await connect();
