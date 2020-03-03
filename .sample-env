@@ -3,3 +3,7 @@ DB_USER=
 DB_PASS=
 DB_PORT=
 DB_NAME=
+PORT=4000
+SMTPUSER=
+SMTPPASS=
+SALES_EMAIL=usman.qamar@mobilelive.ca

@@ -1,4 +1,5 @@
 import * as mailer from 'nodemailer-promise';
+var path = require('path');
 
 class NodeMailer {
   constructor({ to, subject, content }) {
@@ -16,11 +17,17 @@ class NodeMailer {
         pass: process.env.SMTPPASS,
       },
     });
+
     this.mailOptions = {
       from: 'usmanqamar189@gmail.com', // sender address
       to: this.to,
       subject: this.subject,
       html: this.content, // plain text body
+      attachments: [{
+        filename: 'Logo.png',
+        path: 'assets/logo.jpg',
+        cid: 'logo'
+      }]
     };
   }
   async sendMail() {

@@ -8,7 +8,8 @@ const models = require('./models');
 
 const router = express.Router();
 
-router.get('/sendmail', async (req, res) => {
+router.all('/sendmail', async (req, res) => {
+  console.log(req.body)
   const content = await ejs.renderFile(`${__dirname}/templates/emails/result.ejs`, {
     name: 'Stranger',
   });
@@ -18,7 +19,7 @@ router.get('/sendmail', async (req, res) => {
     subject: 'testing',
     content,
   });
-  await mailer.sendMail();
+  //await mailer.sendMail();
   res.send('done');
 });
 
