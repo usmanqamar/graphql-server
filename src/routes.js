@@ -1,7 +1,5 @@
 import graphqlHTTP from 'express-graphql';
 import * as express from 'express';
-import ejs from 'ejs';
-import { Mailer } from './lib/mail';
 
 const { schema } = require('./gql/schema');
 const models = require('./models');
