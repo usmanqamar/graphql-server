@@ -59,7 +59,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint:eslint:fix",
+      "npm run lint:fix",
       "git add --force"
     ],
     "*.json": [
@@ -71,13 +71,13 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
     "lint": "eslint --ext .js ./src",
+    "lint:fix": "eslint --ext .js ./src --fix",
     "build": "babel src --out-dir dist",
     "test": "jest --coverage",
     "test:watch:coverage": "jest --coverage --watchAll",
     "test:watch": "jest --watchAll",
-    "pretest": "npm run test:clean && npm run lint:eslint:fix",
+    "pretest": "npm run test:clean && npm run lint:fix",
     "lint:staged": "lint-staged",
-    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
     "test:clean": "rimraf ./coverage"
   }
 }

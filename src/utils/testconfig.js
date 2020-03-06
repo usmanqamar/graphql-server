@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
 const { connect } = require('./connect');
+
 global.newId = () => {
   return mongoose.Types.ObjectId();
 };
-
 beforeEach(async done => {
   function clearDB() {
     for (const i in mongoose.connection.collections) {
-      mongoose.connection.collections[i].remove(function() {});
+      if (mongoose.connection.collections.hasOwnProperty(i)) {
+        mongoose.connection.collections[i].remove(function() {});
+      }
     }
     return done();
   }
