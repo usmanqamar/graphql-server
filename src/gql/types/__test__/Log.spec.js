@@ -2,8 +2,6 @@ import { LogTC } from '../Log';
 
 const expectedFields = [
   'id',
-  'name',
-  'email',
   'result',
   'level',
   'ip',

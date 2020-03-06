@@ -6,8 +6,8 @@ const queryFields = {
   logs: {
     type: '[Log]',
     resolve: async (_, __, { models: { Log } }) => {
-      const users = await Log.find().exec();
-      return users;
+      const logs = await Log.find().exec();
+      return logs;
     },
   },
   sendMail: {
@@ -25,8 +25,9 @@ const queryFields = {
         subject: 'testing',
         content,
       });
-      await mailer.sendMail();
-      return 'done';
+
+      const result = await mailer.sendMail();
+      return result;
     },
   },
 };

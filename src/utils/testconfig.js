@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const cuid = require('cuid');
-const { connect } = require('./src/utils/connect');
+const { connect } = require('./connect');
 
 global.newId = () => {
   return mongoose.Types.ObjectId();

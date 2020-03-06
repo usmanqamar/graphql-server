@@ -2,7 +2,7 @@ const { Log, logSchema } = require('../log');
 
 describe('User model', () => {
   test('Log schema should have necessary fields in ', async () => {
-    const fields = ['name', 'email', 'ip', 'browser', 'createdAt', 'updatedAt'];
+    const fields = ['ip', 'journeyToken', 'result', 'level', 'browser', 'createdAt', 'updatedAt'];
 
     expect(Object.keys(logSchema.paths)).toEqual(expect.arrayContaining(fields));
   });

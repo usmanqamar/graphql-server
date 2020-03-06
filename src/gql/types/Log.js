@@ -5,8 +5,6 @@ export const LogTC = schemaComposer.createObjectTC({
   name: 'Log',
   fields: {
     id: 'Int',
-    name: 'String',
-    email: 'String',
     result: 'Int',
     level: 'Int',
     ip: 'String!',

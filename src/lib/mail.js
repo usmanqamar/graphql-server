@@ -41,7 +41,7 @@ export class Mailer {
     if(lib === 'nodemailer') {
       return new NodeMailer(data)
     } else {
-      // Some other class
+      return new NodeMailer(data)
     }
   }
 }

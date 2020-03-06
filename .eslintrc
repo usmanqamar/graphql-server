@@ -35,7 +35,8 @@
   },
   "plugins": [
     "prettier",
-    "import"
+    "import",
+    "graphql"
   ],
   "globals": {
     "Class": true,

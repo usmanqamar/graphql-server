@@ -4,14 +4,6 @@ const Schema = mongoose.Schema;
 
 const logSchema = new Schema(
   {
-    name: {
-      type: String,
-      trim: true,
-      required: false,
-    },
-    email: {
-      type: String,
-    },
     journeyToken: {
       type: String,
       required: true,
@@ -29,7 +21,7 @@ const logSchema = new Schema(
     },
     level: {
       type: String,
-      enum: ['CRAWL', 'EXPERT'],
+      enum: ['CRAWL', 'EXPERT', 'STANDUP', 'RUN'],
       default: 'CRAWL',
     },
   },
