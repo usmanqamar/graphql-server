@@ -11,7 +11,7 @@ const queryFields = {
     },
   },
   sendMail: {
-    type: 'String',
+    type: 'JSON',
     args: { ip: 'String', level: 'Int', score: 'Int' },
     resolve: async (_, { ip, score, level }) => {
       const content = await ejs.renderFile(`${appRoot}/src/templates/emails/result.ejs`, {

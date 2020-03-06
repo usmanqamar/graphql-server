@@ -32,6 +32,7 @@
     "graphql-compose-mongoose": "^7.3.4",
     "graphql-iso-date": "^3.6.1",
     "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
     "lodash": "^4.17.10",
     "mongoose": "^5.9.1",
     "nodemailer-promise": "^2.0.0",
@@ -55,10 +56,26 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/utils/testconfig.js"
   },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
     "lint": "eslint --ext .js ./src",
     "build": "babel src --out-dir dist",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch:coverage": "jest --coverage --watchAll",
+    "test:watch": "jest --watchAll",
+    "pretest": "npm run test:clean && npm run lint:eslint:fix",
+    "lint:staged": "lint-staged",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
+    "test:clean": "rimraf ./coverage"
   }
 }

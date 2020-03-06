@@ -4,7 +4,7 @@ import { schemaComposer } from 'graphql-compose';
 export const LogTC = schemaComposer.createObjectTC({
   name: 'Log',
   fields: {
-    id: 'Int',
+    id: 'String',
     result: 'Int',
     level: 'Int',
     ip: 'String!',
