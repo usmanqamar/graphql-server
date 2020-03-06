@@ -66,6 +66,7 @@
       "git add --force"
     ]
   },
+  "pre-commit": "lint:staged",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
     "lint": "eslint --ext .js ./src",
