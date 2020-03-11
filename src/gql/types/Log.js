@@ -1,12 +1,21 @@
 import { GraphQLDate } from 'graphql-iso-date';
 import { schemaComposer } from 'graphql-compose';
 
+export const LevelETC = schemaComposer.createEnumTC({
+  name: 'LevelEnum',
+  values: {
+    CRAWL: { value: 'CRAWL' },
+    EXPERT: { value: 'EXPERT' },
+    STANDUP: { value: 'STANDUP' },
+    RUN: { value: 'RUN' },
+  },
+});
 export const LogTC = schemaComposer.createObjectTC({
   name: 'Log',
   fields: {
     id: 'String',
     result: 'Int',
-    level: 'Int',
+    level: 'LevelEnum',
     ip: 'String!',
     journeyToken: 'String!',
     stepsCompleted: 'Int!',
