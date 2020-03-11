@@ -5,7 +5,7 @@ export const LevelETC = schemaComposer.createEnumTC({
   name: 'LevelEnum',
   values: {
     CRAWL: { value: 'CRAWL' },
-    EXPERT: { value: 'EXPERT' },
+    WALK: { value: 'WALK' },
     STANDUP: { value: 'STANDUP' },
     RUN: { value: 'RUN' },
   },
