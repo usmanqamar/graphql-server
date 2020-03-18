@@ -38,12 +38,17 @@
     "nodemailer-promise": "^2.0.0",
     "nodemon": "^2.0.2",
     "pre-commit": "^1.2.2",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "jest-cucumber": "^2.0.11",
+    "cucumber": "^6.0.5"
   },
   "jest": {
     "verbose": false,
     "testEnvironment": "node",
     "restoreMocks": true,
+    "testMatch": [
+      "**/*.steps.js"
+    ],
     "testPathIgnorePatterns": [
       "dist/",
       "/node_modules/"
@@ -78,6 +83,8 @@
     "test:watch": "jest --watchAll",
     "pretest": "npm run test:clean && npm run lint:fix",
     "lint:staged": "lint-staged",
-    "test:clean": "rimraf ./coverage"
+    "test:clean": "rimraf ./coverage",
+    "bdd": "jest",
+    "cucumber": "cucumber-js ./features -r ./steps"
   }
 }
