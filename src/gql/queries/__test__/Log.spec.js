@@ -2,6 +2,7 @@ import tester from '../../../utils/gql-test';
 import models from '../../../models';
 
 jest.mock('../../../lib/mail');
+/* eslint-disable no-console */
 
 describe('Log Query', () => {
   test('getLogs ', done => {
