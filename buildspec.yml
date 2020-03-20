@@ -2,10 +2,17 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 10
     commands:
-      # Install dependencies needed for running tests
+      - npm -version
+      - npm cache clean --force
       - npm install
-      - pip install --upgrade awscli
-artifacts:
-  files: 
-    - '**/*'
+    #  - npm -ci
+    #  - find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - ls
