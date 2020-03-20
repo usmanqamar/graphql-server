@@ -10,6 +10,6 @@ module.exports.connect = () => {
 
   return mongoose.connect(DB_CONN_STRING, {
     useNewUrlParser: true,
-    serverSelectionTimeoutMS: 2000,
+    serverSelectionTimeoutMS: 5000,
   });
 };
