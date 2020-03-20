@@ -10,7 +10,7 @@ module.exports.connect = () => {
 
   return mongoose.connect(
 //    `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admin`,
-      `mongodb+srv://agilemm_root:3C98fgUk2AYMMj9K@agilemm-xacv3.mongodb.net/test?retryWrites=true&w=majority`,
+      `mongodb+srv://agilemm_root:3C98fgUk2AYMMj9K@agilemm-xacv3.mongodb.net/agilemm?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
     }
