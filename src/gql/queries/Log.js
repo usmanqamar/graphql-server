@@ -1,6 +1,7 @@
 import ejs from 'ejs';
 import appRoot from 'app-root-path';
 import { Mailer } from '../../lib/mail';
+import { SALES_EMAIL } from '../../utils/constants';
 
 const queryFields = {
   logs: {
@@ -21,8 +22,8 @@ const queryFields = {
       });
 
       const mailer = new Mailer('nodemailer', {
-        to: process.env.SALES_EMAIL,
-        subject: 'testing',
+        to: SALES_EMAIL,
+        subject: 'Test Subject',
         content,
       });
 

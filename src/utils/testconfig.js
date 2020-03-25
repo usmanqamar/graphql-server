@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const { connect } = require('./connect');
 
+jest.setTimeout(30000);
+
 global.newId = () => {
   return mongoose.Types.ObjectId();
 };

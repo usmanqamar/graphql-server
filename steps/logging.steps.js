@@ -2,7 +2,7 @@ import { defineFeature, loadFeature } from 'jest-cucumber';
 import tester from '../src/utils/gql-test';
 import models from '../src/models';
 
-const feature = loadFeature('./features/sample.feature');
+const feature = loadFeature('./features/logging.feature');
 
 defineFeature(feature, test => {
   test('Incomplete journey', ({ given, when, then }) => {

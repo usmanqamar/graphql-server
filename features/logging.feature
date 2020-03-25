@@ -10,3 +10,4 @@ Feature: Logging AMM evaluation history
     When I hit the logging api
     Then the api should respond with isCompleted true
     And with provided data
+
