@@ -34,7 +34,7 @@ Feature: Mortage calculator
     Examples:
       | payment   | down   | result  |
       | 100       | 40     | 40      |
-      | 200       | 200    | 0       |
+      | 200       | 200    | 100       |
       | 0         | 20     | 0       |
 
 
