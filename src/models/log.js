@@ -21,7 +21,7 @@ const logSchema = new Schema(
     },
     level: {
       type: String,
-      enum: ['CRAWL', 'EXPERT', 'STANDUP', 'RUN'],
+      enum: ['CRAWL', 'EXPERT', 'STAND', 'RUN'],
       default: 'CRAWL',
     },
   },
