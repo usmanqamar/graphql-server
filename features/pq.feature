@@ -29,14 +29,13 @@ Feature: Mortage calculator
       Given mortgage payment calculator screen is shown
       And purchase price is entered <payment>
       When down payment amount is entered <down>
-      Then down payment percentage is calculated <result>
+      Then down payment percentage is calculated <result>    initial price ...... down payment      .....  percentage auto calclated
 
     Examples:
       | payment   | down   | result  |
       | 100       | 40     | 40      |
-      | 200       | 200    | 100       |
-      | 0         | 20     | 0       |
-
+      | 200       | 200    | 100     |
+      | 0         | 20     | 0      |
 
     Scenario: Add lump sum to pay mortgage faster
       Given mortgage payment calculator screen is shown

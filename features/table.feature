@@ -9,4 +9,5 @@ Feature: Addition with table
         | a | b | answer |
         | 1 | 1 | 2      |
         | 2 | 4 | 6      |
+        | 0 | 0 | 0     |
 

@@ -1,6 +1,4 @@
 Feature: Addition
-  Background: Some background
-    Rule: Some rule
       Scenario: 1 + 1
         Given I start with 1
         When I add 1

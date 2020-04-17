@@ -39,8 +39,7 @@ defineFeature(feature, test => {
       expect(result.isCompleted).toEqual(eval(input));
     });
 
-    then('with provided data', table => {
-      console.log(table);
+    then('with provided data', () => {
       expect(result.ip).toBe(data.data.ip);
     });
   });
@@ -79,7 +78,9 @@ defineFeature(feature, test => {
       expect(result.isCompleted).toEqual(eval(input));
     });
 
-    then('with provided data', () => {
+    then('with provided data:', table => {
+      console.log(table);
+
       expect(result.ip).toBe(data.data.ip);
     });
   });
